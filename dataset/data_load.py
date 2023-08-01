@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+'''
+@Project ：ML_project 
+@Product_name ：PyCharm
+@File ：data_load.py
+@Author ：RockJim
+@Date ：2023/7/24 23:46
+@Description ：进行数据加载
+@Version ：1.0 
+'''
+import os
+import time
+
+import numpy as np
+from numpy import genfromtxt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from config.log_config import log
+logger = log().getLogger("数据集加载")
+
+
+def load_data(file_path: str):
+    """
+        从文件中读取数据，以list的方式进行返回
+    :param file_path: 数据文件存储路径
+    :return:
+    """
+    assert os.path.exists(file_path), logger.error("数据集路径{}不存在".format(file_path))
+    logger.info("从{}加载数据集".format(file_path))
+    start_time = time.time()
+    root_path, full_file_name = os.path.split(file_path)
+    file_name, file_format = full_file_name.split('.')
+    if file_format == 'csv':
+        file_data = genfromtxt(file_path, delimiter=',')
+
+    col_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    x_data = file_data[:, col_index]
+    y_data = file_data[:, [14]]
+    end_time = time.time()
+    run_time = start_time - end_time
+    logger.info("数据加载完成，耗时{}".format(run_time))
+    return x_data, y_data
+
+
+def data_processing(x, y):
+    """
+        对数据进行预处理操作
+    :return:
+    """
+    logger.info("数据处理")
+    # 拆分数据集
+    logger.info("拆分数据集")
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=10)
+    # 数据标准化预处理
+    logger.info("数据标准化预处理")
+    scaler = StandardScaler()
+    y_train = np.array(y_train).reshape(-1, 1)
+    y_test = np.array(y_test).reshape(-1, 1)
+    x_train = scaler.fit_transform(x_train)
+    x_test = scaler.fit_transform(x_test)
+    y_train = scaler.fit_transform(y_train).ravel()
+    y_test = scaler.fit_transform(y_test).ravel()
+    return x_train, x_test, y_train, y_test, scaler
