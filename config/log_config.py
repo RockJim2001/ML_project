@@ -12,7 +12,7 @@
 import logging
 
 # 设置日志文件的保存路径和文件名
-log_file_path = 'logs/svr_grid_search.log'
+log_file_path = 'logs/svr_aeo.log'
 # 配置全局的logging对象
 logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

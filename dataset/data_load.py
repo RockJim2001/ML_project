@@ -38,7 +38,7 @@ def load_data(file_path: str):
     x_data = file_data[:, col_index]
     y_data = file_data[:, [14]]
     end_time = time.time()
-    run_time = start_time - end_time
+    run_time = end_time - start_time
     logger.info("数据加载完成，耗时{}".format(run_time))
     return x_data, y_data
 

@@ -72,7 +72,7 @@ def svr_grid_search():
     # 得到最佳模型
     best_svr = grid_search.best_estimator_
     end_time = time.time()
-    run_time = start_time - end_time
+    run_time = end_time - start_time
     logger.info("grid_search算法执行完毕，耗时{}".format(run_time))
 
     # 在测试集上评估最佳模型
@@ -80,52 +80,3 @@ def svr_grid_search():
     y_pred = best_svr.predict(x_test)
 
     mae, mse, evs, medAE, msle, rae, rse, rmse, r2 = evaluate_prediction(y_test, y_pred)
-
-# 创建svR实例
-# svr = SVR(C=1, kernel='rbf', epsilon=0.2)
-
-# # 创建k-fold交叉验证对象，k=5表示5折交叉验证
-# k_fold = KFold(n_splits=2)
-#
-#
-# mse_scores = cross_val_score(svr_model, x, y, scoring='neg_mean_squared_error', cv=k_fold)
-#
-#
-# # 将均方误差的负值转换为正值，然后计算均方根误差（RMSE）
-# rmse_scores = np.sqrt(-mse_scores)
-#
-# # 计算均方误差（MSE）的平均值和标准差
-# avg_mse = np.mean(-mse_scores)
-# std_mse = np.std(-mse_scores)
-#
-# # 计算均方根误差（RMSE）的平均值和标准差
-# avg_rmse = np.mean(rmse_scores)
-# std_rmse = np.std(rmse_scores)
-#
-# # 计算平均绝对误差（MAE）
-# mae_scores = cross_val_score(svr_model, x, y, scoring='neg_mean_absolute_error', cv=k_fold)
-# avg_mae = np.mean(-mae_scores)
-#
-# # 计算R²（决定系数）
-# r2_scores = cross_val_score(svr_model, x, y, scoring='r2', cv=k_fold)
-# avg_r2 = np.mean(r2_scores)
-# std_r2 = np.std(r2_scores)
-#
-# # 将指标以表格形式打印出来
-# metrics_table = pd.DataFrame({
-#     'Metric': ['MSE', 'RMSE', 'MAE', 'R²'],
-#     'Average_Score': [avg_mse, avg_rmse, avg_mae, avg_r2],
-#     'Standard_Deviation': [std_mse, std_rmse, 'N/A', std_r2]
-# })
-#
-# print(metrics_table)
-
-
-# svr = svr.fit(x_train, y_train)
-# # 预测
-# svr_predict = svr.predict(x_test)
-#
-# # visual_prediction(y_train, y, svr_predict, scaler)
-#
-# # 评价结果
-# mae, mse, evs, medAE, msle, rae, rse, rmse, r2 = evaluate_prediction(y_test, svr_predict)
