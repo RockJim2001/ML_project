@@ -19,7 +19,7 @@ from config.log_config import log
 from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
-from model.optimizer.aeo import aeo_algorithm
+from model.optimizer.aeo import aeo_algorithm_svr
 from model.svr import custom_SVR
 from tools.common import print_best_params
 
@@ -63,7 +63,7 @@ def svr_aeo():
     logger.info("使用AEO算法搜索最优参数……")
     start_time = time.time()
     # 调用AEO算法
-    best_params = aeo_algorithm(param_grid)
+    best_params = aeo_algorithm_svr(param_grid)
     # 使用最优超参数构建SVR模型
     # kernel, C, epsilon, gamma, degree, coef0, shrinking, tol, max_iter, cache_size, verbose = best_params
     print_best_params(best_params)
