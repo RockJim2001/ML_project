@@ -15,20 +15,18 @@ from torch import nn, optim
 from torch.utils.tensorboard import SummaryWriter
 
 from config.log_config import log
-from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
+from dataset.data_config import DATASET_NAME, ROOT_PATH
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
 from model.ann.ann import Net
-from model.ann.genetic_algorithm import GeneticAlogrithm, train
-
-# 指定日志存储路径
-log_dir = r"logs/"
+from model.ann.genetic_algorithm import GeneticAlogrithm
+from dataset.data_config import log_dir
 logger = log().getLogger(__name__)
 
 
 def data_load():
     # 加载数据集
-    x_data, y_data = load_data(os.path.join(DATASET_ROOT_PATH, BASE_DATASET_NAME))
+    x_data, y_data = load_data(os.path.join(ROOT_PATH, 'resource', DATASET_NAME))
     # 数据归一化处理
     x_train, x_test, y_train, y_test, scaler = data_processing(x_data, y_data)
 
@@ -47,7 +45,7 @@ if __name__ == '__main__':
     learning_rate = 0.1
     epochs = 20
     population_size = 20
-    num_generations = 5
+    num_generations = 1
     mutation_rate = 0.1
     # 加载数据
     X_train, Y_train, X_test, Y_test = data_load()
@@ -71,7 +69,7 @@ if __name__ == '__main__':
         loss.backward()  # 反向传播
         sgd.step()  # 更新参数(weight和bias)
         sgd.zero_grad()  # 清零梯度数据
-        print(
+        logger.info(
             f"epoch:{epoch}, loss:{loss:.6f}"
         )
         writer.add_scalar('Loss/train', loss.item(), epoch)

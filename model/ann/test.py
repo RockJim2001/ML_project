@@ -27,7 +27,7 @@
 #
 # # 生成训练数据
 # # 加载数据集
-# x_data, y_data = load_data(os.path.join(r'D:\Code\PythonProject\ML_project', DATASET_ROOT_PATH, '数据.csv'))
+# x_data, y_data = load_data(os.path.join(r'D:\Code\PythonProject\ML_project', DATASET_ROOT_PATH, 'base-数据.csv'))
 # # 数据归一化处理
 # x_train, x_test, y_train, y_test, scaler = data_processing(x_data, y_data)
 # N = 1000  # 训练数据样本个数。
