@@ -14,7 +14,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from sklearn.metrics import mean_squared_error
-from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
+from config.config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

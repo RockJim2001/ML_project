@@ -9,7 +9,6 @@
 @Description ：一个demo，使用SVR支持向量机做回归预测（房价）
 @Version ：1.0 
 '''
-import os
 
 from sklearn.datasets import fetch_california_housing
 from sklearn.svm import SVR
@@ -17,8 +16,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, explained_variance_score, r2_score
 from sklearn.model_selection import train_test_split
 import numpy as np
-from dataset.data_config import BOSTON_HOUSING_DATA, DATASET_ROOT_PATH, BASE_DATASET_NAME
-from dataset.data_load import load_data
 
 
 def notEmpty(s):

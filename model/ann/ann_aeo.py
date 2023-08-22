@@ -15,7 +15,7 @@ import torch
 from torch import optim
 
 from config.log_config import log
-from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
+from config.config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
 from model.ann.ann import ANNModel

@@ -14,7 +14,7 @@ import os.path
 
 import colorlog
 # 设置日志文件的保存路径和文件名
-from dataset.data_config import log_file_path
+from config.config import log_file_path
 
 # 确保目录存在
 os.makedirs(os.path.dirname(log_file_path), exist_ok=True)

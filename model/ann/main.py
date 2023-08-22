@@ -15,12 +15,12 @@ from torch import nn, optim
 from torch.utils.tensorboard import SummaryWriter
 
 from config.log_config import log
-from dataset.data_config import DATASET_NAME, ROOT_PATH
+from config.config import DATASET_NAME, ROOT_PATH
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
 from model.ann.ann import Net
 from model.ann.genetic_algorithm import GeneticAlogrithm
-from dataset.data_config import log_dir
+from config.config import log_dir
 logger = log().getLogger(__name__)
 
 

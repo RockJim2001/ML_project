@@ -15,13 +15,12 @@ import time
 
 import joblib
 import pandas as pd
-from sklearn.model_selection import cross_val_score, KFold, GridSearchCV
+from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVR
 
-from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
+from config.config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
-from tools.visualization import visual_prediction
 from config.log_config import log
 
 logger = log().getLogger("SVR 算法做回归预测，使用网格搜索算法进行最优参数的搜索")
