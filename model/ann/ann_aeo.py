@@ -10,7 +10,6 @@
 @Version ：1.0
 """
 import os
-
 import numpy as np
 import torch
 from torch import optim
@@ -20,7 +19,6 @@ from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
 from model.ann.ann import ANNModel
-from model.loss.loss import custom_loss
 from model.optimizer.aeo import aeo_algorithm_original
 
 logger = log().getLogger(__name__)
@@ -76,8 +74,8 @@ class ANN_AEO:
         self.y_test = y_test
         # 输入输出维度部分
         self.input_dim = self.x_train.shape[1]
-        self.output_dim = self.y_train.shape[1]
-        # self.output_dim = 1
+        # self.output_dim = self.y_train.shape[1]
+        self.output_dim = 1
         logger.info("输入维度为：\t{}，输出维度为：\t{}".format(self.input_dim, self.output_dim))
 
         # 参数的可选范围和格式定义
@@ -121,7 +119,7 @@ class ANN_AEO:
 
     def forward(self):
         # 定义AEO算法参数
-        num_generations = 50
+        num_generations = 5
         competition_factor = 0.5
         logger.info("AEO算法迭代\t{}\t代，竞争因子为：\t{}".format(num_generations, competition_factor))
         # 使用AEO算法来优化神经网络超参数
@@ -161,11 +159,14 @@ class ANN_AEO:
         # 使用训练好的模型进行预测
         logger.info("使用训练好的模型进行预测:")
         test_inputs = torch.tensor(self.x_test, dtype=torch.float32, device=device)
-        predictions = best_model(test_inputs).cpu().numpy()
+        # predictions = best_model(test_inputs).cpu().numpy()
+        # y_test = torch.tensor(self.y_test, dtype=torch.float32, device=device)
+        predictions = best_model(test_inputs).detach().numpy()
         print("最优学习率：", best_learning_rate)
         print("最优批大小：", best_batch_size)
         print("最优隐藏层数：", best_num_hidden_layers)
         print("最优激活函数：", best_activation)
         print("最优隐藏层维度：", best_hidden_dims)
-        print("模型预测结果：", predictions)
-        evaluate_prediction(self.x_test, predictions)
+        # print("模型预测结果：", predictions)
+        temp = self.y_test[:, np.newaxis]
+        evaluate_prediction(temp, predictions)

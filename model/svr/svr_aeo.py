@@ -13,14 +13,11 @@ import os
 import time
 
 from sklearn.svm import SVR
-
-# from sklearn.svm import SVR
 from config.log_config import log
 from dataset.data_config import DATASET_ROOT_PATH, BASE_DATASET_NAME
 from dataset.data_load import load_data, data_processing
 from evaluate.evaluate import evaluate_prediction
 from model.optimizer.aeo import aeo_algorithm_svr
-from model.svr import custom_SVR
 from tools.common import print_best_params
 
 logger = log().getLogger("SVR算法使用AEO优化算法来寻找最优参数")

@@ -17,7 +17,7 @@ from numpy import genfromtxt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from config.log_config import log
-logger = log().getLogger("数据集加载")
+logger = log().getLogger(__name__)
 
 
 def load_data(file_path: str):
@@ -36,7 +36,8 @@ def load_data(file_path: str):
 
     col_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     x_data = file_data[:, col_index]
-    y_data = file_data[:, [14]]
+    y_data = file_data[:, [14, 15, 16, 17, 18, 19]]
+    # y_data = file_data[:, [14]]
     end_time = time.time()
     run_time = end_time - start_time
     logger.info("数据加载完成，耗时{}".format(run_time))
@@ -55,10 +56,16 @@ def data_processing(x, y):
     # 数据标准化预处理
     logger.info("数据标准化预处理")
     scaler = StandardScaler()
-    y_train = np.array(y_train).reshape(-1, 1)
-    y_test = np.array(y_test).reshape(-1, 1)
+    if y_train.shape[1] == 1:
+        y_train = np.array(y_train).reshape(-1, 1)
+    if y_test.shape[1] == 1:
+        y_test = np.array(y_test).reshape(-1, 1)
     x_train = scaler.fit_transform(x_train)
     x_test = scaler.fit_transform(x_test)
-    y_train = scaler.fit_transform(y_train).ravel()
-    y_test = scaler.fit_transform(y_test).ravel()
+    y_train = scaler.fit_transform(y_train)
+    y_test = scaler.fit_transform(y_test)
+    if y_train.shape[1] == 1:
+        y_train = scaler.fit_transform(y_train).ravel()
+    if y_test.shape[1] == 1:
+        y_test = scaler.fit_transform(y_test).ravel()
     return x_train, x_test, y_train, y_test, scaler

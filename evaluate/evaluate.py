@@ -115,8 +115,8 @@ def relative_squared_error(y_true, y_pred):
     :param y_pred:  预测值的数组。
     :return:    rse：float，相对平方误差的值。
     """
-    squared_errors = np.square(y_true - y_pred)
-    mean_squared_error_ = np.mean(squared_errors)
-    mean_true_value = np.mean(y_true)
-    rse = mean_squared_error_ / (mean_true_value ** 2)
+    true_mean = np.mean(y_true)
+    squared_error_num = np.sum(np.square(y_true - y_pred))
+    squared_error_den = np.sum(np.square(y_true - true_mean))
+    rse = squared_error_num / squared_error_den
     return rse

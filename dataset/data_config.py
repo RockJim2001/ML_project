@@ -11,8 +11,8 @@
 '''
 
 # 数据存储根目录
-DATASET_ROOT_PATH = r'resource'
+DATASET_ROOT_PATH = r'D:\Code\PythonProject\ML_project\resource'
 # 基础数据-20230723.csv
-BASE_DATASET_NAME = '基础数据-20230723.csv'
+BASE_DATASET_NAME = '数据.csv'
 # 波士顿房价
 BOSTON_HOUSING_DATA = 'boston_housing.data'
