@@ -14,7 +14,7 @@ import numpy as np
 
 # ########数据配置#################
 # 数据存储根目录
-ROOT_PATH = r'/'
+ROOT_PATH = r'D:\Code\PythonProject\ML_project'
 # base-数据.csv
 BASE_DATASET_NAME = 'base-数据.csv'
 # 波士顿房价

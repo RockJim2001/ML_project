@@ -101,3 +101,80 @@
 # pred = predictions.detach().numpy()
 # # 计算评估指标
 # evaluate_prediction(Y_test.detach().numpy(), pred)
+import numpy as np
+from matplotlib import pyplot as plt
+from pymoo.algorithms.moo.nsga2 import NSGA2
+from pymoo.core.problem import Problem
+from pymoo.factory import get_problem, get_reference_directions
+from pymoo.operators.crossover.sbx import SBX
+from pymoo.operators.mutation.pm import PolynomialMutation
+from pymoo.operators.sampling.rnd import FloatRandomSampling
+from pymoo.optimize import minimize
+
+
+# 定义一个多目标优化问题
+class MultiObjectiveProblem(Problem):
+    def __init__(self):
+        super().__init__(
+            n_var=5,  # 输入变量的数量
+            n_obj=6,  # 目标函数的数量
+            n_constr=0,  # 约束条件的数量
+            xl=np.array([0, 0, 0, 0, 0]),  # 输入变量的下界
+            xu=np.array([1, 1, 1, 1, 1])  # 输入变量的上界
+        )
+
+    def _evaluate(self, x, out, *args, **kwargs):
+        # 定义六个目标函数
+        f1 = x[:, 0]
+        f2 = (1 + x[:, 1]) / x[:, 0]
+        f3 = x[:, 2] ** 2 + x[:, 3] ** 2
+        f4 = np.sin(x[:, 4])
+        f5 = (x[:, 3] - x[:, 2]) ** 2
+        f6 = (x[:, 2] - x[:, 4]) ** 2
+        temp = np.column_stack([f1, f2, f3, f4, f5, f6])
+        out["F"] = temp
+
+
+problem = MultiObjectiveProblem()
+
+algorithm = NSGA2(
+    pop_size=100,  # 种群个数
+    sampling=FloatRandomSampling(),
+    crossover=SBX(prob=0.9, eta=15),
+    mutation=PolynomialMutation(eta=20),
+    eliminate_duplicates=True
+)
+
+res = minimize(problem, algorithm, termination=('n_gen', 100), verbose=True)
+
+# 获得优化结果
+optimal_solutions = res.X
+optimal_objectives = res.F
+
+# print("Optimal Solutions:")
+# print(optimal_solutions)
+# print("Optimal Objectives:")
+# print(optimal_objectives)
+# 创建雷达图
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+
+# 创建角度
+theta = np.linspace(0, 2*np.pi, problem.n_obj, endpoint=False)
+
+# 绘制雷达图
+for i in range(len(optimal_objectives)):
+    ax.plot(theta, optimal_objectives[i])
+
+# 设置角度刻度标签
+ax.set_xticks(theta)
+ax.set_xticklabels(["F1", "F2", "F3", "F4", "F5", "F6"])
+
+# 添加网格线
+ax.grid(True)
+
+# # 添加标题和图例
+# plt.title("Pareto Front")
+# plt.legend(["Solution " + str(i+1) for i in range(len(optimal_solutions))])
+
+# 展示雷达图
+plt.show()

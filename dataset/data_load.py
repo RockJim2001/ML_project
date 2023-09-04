@@ -12,11 +12,15 @@
 import os
 import time
 
+import joblib
 import numpy as np
 from numpy import genfromtxt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+from config.config import log_dir
 from config.log_config import log
+
 logger = log().getLogger(__name__)
 
 
@@ -62,10 +66,12 @@ def data_processing(x, y):
         y_test = np.array(y_test).reshape(-1, 1)
     x_train = scaler.fit_transform(x_train)
     x_test = scaler.fit_transform(x_test)
+    joblib.dump(scaler, log_dir + '/scaler_x.pkl')
     y_train = scaler.fit_transform(y_train)
     y_test = scaler.fit_transform(y_test)
     if y_train.shape[1] == 1:
         y_train = scaler.fit_transform(y_train).ravel()
     if y_test.shape[1] == 1:
         y_test = scaler.fit_transform(y_test).ravel()
-    return x_train, x_test, y_train, y_test, scaler
+    joblib.dump(scaler, log_dir + "/scaler_y.pkl")
+    return x_train, x_test, y_train, y_test
