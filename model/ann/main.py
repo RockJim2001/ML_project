@@ -97,12 +97,14 @@ if __name__ == '__main__':
     # 计算评估指标
     evaluate_prediction(Y_test.detach().numpy(), pred)
 
-    # 调用多目标优化
+    # 多目标优化参数的约束条件
+    constr_list = [np.array([0.5, 0.5, 0.5, 3.0, 0.20, 0.20,
+                             0.20, 0.20, 0.2, 0.2, 0.2, 0.2]),
+                   np.array([1.0, 1.5, 1.5, 4.0, 0.40, 0.80,
+                             0.40, 0.40, 0.3, 0.3, 0.4, 0.4])]
 
     # 初始化多目标优化问题
-    problem = MultiObjectiveProblem(best_model,
-                                    input_features, output_features,
-                                    [np.array([0.0] * input_features), np.array([2.0] * input_features)])
+    problem = MultiObjectiveProblem(best_model, input_features, output_features, constr_list)
 
     # 定义优化算法的参数和配置
     algorithm = NSGA2(
