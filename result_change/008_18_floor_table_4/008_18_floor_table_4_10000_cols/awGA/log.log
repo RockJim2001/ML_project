@@ -1,0 +1,66 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 54327 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\awGA.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   50   |     None    |     None    | 8.34706E-02 | 3.61563E+04
+ 5 |  300   |     None    |     None    | 3.14114E-02 | 7.56461E+03
+ 10|  550   |     None    |     None    | 1.11271E-02 | 7.84534E+03
+ 15|  800   |     None    |     None    | 3.78882E-03 | 3.86311E+03
+ 20|  1050  |     None    |     None    | 1.12044E-03 | 1.30846E+03
+ 25|  1300  |     None    |     None    | 5.83239E-04 | 1.47216E+03
+ 30|  1550  |     None    |     None    | 5.26285E-04 | 1.22071E+03
+ 35|  1800  |     None    |     None    | 4.92702E-04 | 8.71382E+02
+ 40|  2050  |     None    |     None    | 3.16914E-04 | 9.36951E+02
+ 45|  2300  |     None    |     None    | 3.04812E-04 | 7.14003E+02
+ 50|  2550  |     None    |     None    | 3.96126E-04 | 8.52923E+02
+ 55|  2800  |     None    |     None    | 2.96217E-04 | 4.63608E+02
+ 60|  3050  |     None    |     None    | 2.07192E-04 | 5.29505E+02
+ 65|  3300  |     None    |     None    | 1.89388E-04 | 3.40582E+02
+ 70|  3550  |     None    |     None    | 1.61430E-04 | 3.42001E+02
+ 75|  3800  |     None    |     None    | 1.88306E-04 | 8.35152E+02
+ 80|  4050  |     None    |     None    | 1.49879E-04 | 3.00067E+02
+ 85|  4300  |     None    |     None    | 2.66468E-04 | 6.65270E+02
+ 90|  4550  |     None    |     None    | 1.67861E-04 | 5.12080E+02
+ 95|  4800  |     None    |     None    | 1.37513E-04 | 3.05630E+02
+ 99|  5000  |     None    |     None    | 6.80480E-03 | 3.00750E+03
+Error: failed to send plot to http://127.0.0.1:63342
+Traceback (most recent call last):
+  File "D:\Softwares\JetBrains\PyCharm 2023.1\plugins\python\helpers\pycharm_display\datalore\display\display_.py", line 86, in _send_display_message
+    urllib_request.urlopen(url, buffer)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Softwares\JetBrains\PyCharm 2023.1\plugins\python\helpers\pycharm_display\datalore\display\display_.py", line 61, in try_empty_proxy
+    urllib_request.urlopen(url, buffer)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\25760\.conda\envs\torch\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+用时：828.3967432975769 秒
+非支配个体数：50 个
+
+Process finished with exit code 0

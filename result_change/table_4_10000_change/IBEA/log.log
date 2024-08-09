@@ -1,0 +1,30 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 53751 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\IBEA.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   35   |     None    |     None    | 4.15612E-02 | 5.14483E+03
+ 5 |  210   |     None    |     None    | 3.13339E-02 | 3.83235E+03
+ 10|  385   |     None    |     None    | 1.53994E-02 | 3.24990E+03
+ 15|  560   |     None    |     None    | 4.14544E-03 | 1.68333E+03
+ 20|  735   |     None    |     None    | 1.42716E-03 | 5.76830E+02
+ 25|  910   |     None    |     None    | 1.05881E-03 | 4.37463E+02
+ 30|  1085  |     None    |     None    | 6.16839E-04 | 5.40929E+02
+ 35|  1260  |     None    |     None    | 6.71784E-04 | 3.46641E+02
+ 40|  1435  |     None    |     None    | 5.85288E-04 | 4.48486E+02
+ 45|  1610  |     None    |     None    | 8.25234E-04 | 6.12651E+02
+ 50|  1785  |     None    |     None    | 5.44203E-04 | 5.50098E+02
+ 55|  1960  |     None    |     None    | 4.15878E-04 | 7.70002E+02
+ 60|  2135  |     None    |     None    | 4.81694E-04 | 2.30246E+02
+ 65|  2310  |     None    |     None    | 7.55969E-04 | 2.77423E+02
+ 70|  2485  |     None    |     None    | 6.76499E-04 | 3.64378E+02
+ 75|  2660  |     None    |     None    | 7.63012E-04 | 7.37226E+02
+ 80|  2835  |     None    |     None    | 1.06919E-03 | 5.80250E+02
+ 85|  3010  |     None    |     None    | 8.99374E-04 | 4.62350E+02
+ 90|  3185  |     None    |     None    | 1.08524E-03 | 4.67099E+02
+ 95|  3360  |     None    |     None    | 1.04735E-03 | 4.27007E+02
+ 99|  3500  |     None    |     None    | 9.31041E-04 | 6.05242E+02
+用时：484.63336515426636 秒
+非支配个体数：31 个
+
+Process finished with exit code 0

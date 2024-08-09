@@ -1,0 +1,30 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 53038 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\MOPSO.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   50   |     None    |     None    | 3.56482E-02 | 4.49456E+03
+ 5 |  300   |     None    |     None    | 6.47615E-02 | 2.94909E+03
+ 10|  550   |     None    |     None    | 4.70784E-02 | 2.57859E+03
+ 15|  800   |     None    |     None    | 5.86445E-02 | 2.33136E+03
+ 20|  1050  |     None    |     None    | 4.92342E-02 | 1.89121E+03
+ 25|  1300  |     None    |     None    | 5.77054E-02 | 2.33803E+03
+ 30|  1550  |     None    |     None    | 6.34147E-02 | 2.73517E+03
+ 35|  1800  |     None    |     None    | 6.51974E-02 | 3.66430E+03
+ 40|  2050  |     None    |     None    | 5.49900E-02 | 3.02792E+03
+ 45|  2300  |     None    |     None    | 6.16858E-02 | 2.36317E+03
+ 50|  2550  |     None    |     None    | 6.37846E-02 | 2.27465E+03
+ 55|  2800  |     None    |     None    | 6.12629E-02 | 3.26386E+03
+ 60|  3050  |     None    |     None    | 5.68651E-02 | 2.90348E+03
+ 65|  3300  |     None    |     None    | 5.24884E-02 | 2.27181E+03
+ 70|  3550  |     None    |     None    | 5.77877E-02 | 2.49922E+03
+ 75|  3800  |     None    |     None    | 5.67752E-02 | 3.39898E+03
+ 80|  4050  |     None    |     None    | 5.19880E-02 | 2.66206E+03
+ 85|  4300  |     None    |     None    | 5.42909E-02 | 2.62494E+03
+ 90|  4550  |     None    |     None    | 5.64041E-02 | 2.77503E+03
+ 95|  4800  |     None    |     None    | 5.77620E-02 | 2.48866E+03
+ 99|  5000  |     None    |     None    | 7.32219E-02 | 1.15531E+03
+用时：1199.0437316894531 秒
+非支配个体数：500 个
+
+Process finished with exit code 0

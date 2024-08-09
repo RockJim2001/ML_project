@@ -1,0 +1,30 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 61939 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\REVA.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   35   |     None    |     None    | 8.25984E-02 | 3.71106E+04
+ 5 |  210   |     None    |     None    | 2.51319E-02 | 1.82006E+04
+ 10|  385   |     None    |     None    | 6.58195E-03 | 5.42299E+03
+ 15|  560   |     None    |     None    | 5.45774E-03 | 5.32528E+03
+ 20|  735   |     None    |     None    | 2.37289E-03 | 4.58279E+03
+ 25|  910   |     None    |     None    | 2.37060E-03 | 2.22309E+03
+ 30|  1085  |     None    |     None    | 1.11281E-03 | 2.21058E+03
+ 35|  1260  |     None    |     None    | 8.23773E-04 | 2.29900E+03
+ 40|  1435  |     None    |     None    | 4.45507E-04 | 8.21164E+02
+ 45|  1610  |     None    |     None    | 4.86670E-04 | 1.31740E+03
+ 50|  1785  |     None    |     None    | 6.32328E-04 | 4.37093E+03
+ 55|  1960  |     None    |     None    | 8.23357E-04 | 5.06945E+03
+ 60|  2135  |     None    |     None    | 7.88390E-04 | 5.28476E+03
+ 65|  2310  |     None    |     None    | 9.34989E-04 | 4.12177E+03
+ 70|  2485  |     None    |     None    | 1.36855E-03 | 4.72722E+03
+ 75|  2660  |     None    |     None    | 1.07906E-03 | 3.81661E+03
+ 80|  2835  |     None    |     None    | 1.13580E-03 | 2.81811E+03
+ 85|  3010  |     None    |     None    | 8.82782E-04 | 2.66222E+03
+ 90|  3185  |     None    |     None    | 6.75820E-04 | 2.35124E+03
+ 95|  3360  |     None    |     None    | 8.13153E-04 | 4.29991E+03
+ 99|  3500  |     None    |     None    | 4.30389E-04 | 9.34863E+02
+用时：419.6362452507019 秒
+非支配个体数：15 个
+
+Process finished with exit code 0

@@ -1,0 +1,30 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 60953 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\NSGA3.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   42   |     None    |     None    | 3.31968E-03 | 1.22083E+04
+ 5 |  252   |     None    |     None    | 1.51278E-02 | 1.14975E+04
+ 10|  462   |     None    |     None    | 9.61007E-03 | 1.22363E+04
+ 15|  672   |     None    |     None    | 1.27504E-03 | 2.41423E+03
+ 20|  882   |     None    |     None    | 2.21624E-03 | 3.35461E+03
+ 25|  1092  |     None    |     None    | 9.10360E-04 | 3.34630E+03
+ 30|  1302  |     None    |     None    | 3.63891E-04 | 1.55220E+03
+ 35|  1512  |     None    |     None    | 3.29748E-04 | 1.62353E+03
+ 40|  1722  |     None    |     None    | 1.97042E-04 | 1.33914E+03
+ 45|  1932  |     None    |     None    | 1.55723E-04 | 1.22539E+03
+ 50|  2142  |     None    |     None    | 3.20049E-04 | 1.35465E+03
+ 55|  2352  |     None    |     None    | 3.13328E-04 | 1.55036E+03
+ 60|  2562  |     None    |     None    | 2.62736E-04 | 1.60234E+03
+ 65|  2772  |     None    |     None    | 1.01417E-04 | 1.02441E+03
+ 70|  2982  |     None    |     None    | 2.33943E-04 | 1.47660E+03
+ 75|  3192  |     None    |     None    | 2.40341E-04 | 1.66499E+03
+ 80|  3402  |     None    |     None    | 6.73627E-04 | 2.73788E+03
+ 85|  3612  |     None    |     None    | 3.52452E-04 | 1.35614E+03
+ 90|  3822  |     None    |     None    | 5.92683E-04 | 2.12741E+03
+ 95|  4032  |     None    |     None    | 2.50486E-04 | 1.47902E+03
+ 99|  4200  |     None    |     None    | 3.24774E-04 | 1.54782E+03
+用时：19.777987241744995 秒
+非支配个体数：42 个
+
+Process finished with exit code 0

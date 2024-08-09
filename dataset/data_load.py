@@ -38,9 +38,13 @@ def load_data(file_path: str):
     if file_format == 'csv':
         file_data = genfromtxt(file_path, delimiter=',')
 
-    col_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    # col_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    col_index = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+                 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]    # 30输入
     x_data = file_data[:, col_index]
-    y_data = file_data[:, [14, 15, 16, 17, 18, 19]]
+    # y_data = file_data[:, [14, 15, 16, 17, 18, 19]]
+    # y_data = file_data[:, [33, 34, 35, 36, 38, 39]]     # 6输出
+    y_data = file_data[:, [32, 33, 34, 35]]     # 4输出
     # y_data = file_data[:, [14]]
     end_time = time.time()
     run_time = end_time - start_time
@@ -54,24 +58,30 @@ def data_processing(x, y):
     :return:
     """
     logger.info("数据处理")
-    # 拆分数据集
-    logger.info("拆分数据集")
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=10)
+
     # 数据标准化预处理
     logger.info("数据标准化预处理")
     scaler = StandardScaler()
+    x = scaler.fit_transform(x)
+    joblib.dump(scaler, log_dir + '/scaler_x.pkl')
+    y = scaler.fit_transform(y)
+    joblib.dump(scaler, log_dir + '/scaler_y.pkl')
+    # 拆分数据集
+    logger.info("拆分数据集")
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=10)
+
     if y_train.shape[1] == 1:
         y_train = np.array(y_train).reshape(-1, 1)
     if y_test.shape[1] == 1:
         y_test = np.array(y_test).reshape(-1, 1)
-    x_train = scaler.fit_transform(x_train)
-    x_test = scaler.fit_transform(x_test)
-    joblib.dump(scaler, log_dir + '/scaler_x.pkl')
-    y_train = scaler.fit_transform(y_train)
-    y_test = scaler.fit_transform(y_test)
+    # x_train = scaler.fit_transform(x_train)
+    # x_test = scaler.fit_transform(x_test)
+    # joblib.dump(scaler, log_dir + '/scaler_x.pkl')
+    # y_train = scaler.fit_transform(y_train)
+    # y_test = scaler.fit_transform(y_test)
     if y_train.shape[1] == 1:
         y_train = scaler.fit_transform(y_train).ravel()
     if y_test.shape[1] == 1:
         y_test = scaler.fit_transform(y_test).ravel()
-    joblib.dump(scaler, log_dir + "/scaler_y.pkl")
+    # joblib.dump(scaler, log_dir + "/scaler_y.pkl")
     return x_train, x_test, y_train, y_test

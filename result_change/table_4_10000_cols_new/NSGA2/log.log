@@ -1,0 +1,31 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 50111 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\NSGA2.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   50   |     None    |     None    | 1.96734E-01 | 1.54406E+06
+ 5 |  300   |     None    |     None    | 2.58373E-01 | 2.48130E+05
+ 10|  550   |     None    |     None    | 2.72458E-01 | 5.67672E+05
+ 15|  800   |     None    |     None    | 2.75734E-01 | 5.28679E+05
+ 20|  1050  |     None    |     None    | 2.81013E-01 | 5.28107E+05
+ 25|  1300  |     None    |     None    | 2.84098E-01 | 5.18079E+05
+ 30|  1550  |     None    |     None    | 2.80865E-01 | 5.37538E+05
+ 35|  1800  |     None    |     None    | 2.77886E-01 | 5.47069E+05
+ 40|  2050  |     None    |     None    | 2.72191E-01 | 6.02889E+05
+ 45|  2300  |     None    |     None    | 2.75036E-01 | 4.77141E+05
+ 50|  2550  |     None    |     None    | 2.81104E-01 | 4.89699E+05
+ 55|  2800  |     None    |     None    | 2.83471E-01 | 5.08276E+05
+ 60|  3050  |     None    |     None    | 2.84439E-01 | 6.21971E+05
+ 65|  3300  |     None    |     None    | 2.78244E-01 | 7.04844E+05
+ 70|  3550  |     None    |     None    | 2.89921E-01 | 5.93913E+05
+ 75|  3800  |     None    |     None    | 2.86586E-01 | 7.36623E+05
+ 80|  4050  |     None    |     None    | 2.89107E-01 | 5.13401E+05
+ 85|  4300  |     None    |     None    | 2.91505E-01 | 6.17070E+05
+ 90|  4550  |     None    |     None    | 2.83114E-01 | 5.14442E+05
+ 95|  4800  |     None    |     None    | 2.84431E-01 | 6.52515E+05
+ 99|  5000  |     None    |     None    | 2.90025E-01 | 4.95641E+05
+<bound method Population.getInfo of <geatpy.Population.Population object at 0x0000026859026F40>>
+用时：13.500912189483643 秒
+非支配个体数：50 个
+
+Process finished with exit code 0

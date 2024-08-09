@@ -1,0 +1,30 @@
+C:\Users\25760\.conda\envs\torch\python.exe "D:/Softwares/JetBrains/PyCharm 2023.1/plugins/python/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 60926 --file E:\PythonProject\machine_learning\ML_project-Data_4\ML_project\MOEAs\MOEADDRA.py
+Connected to pydev debugger (build 231.8109.197)
+====================================================================
+gen|  eval  |      gd     |     igd     |      hv     |   spacing
+--------------------------------------------------------------------
+ 0 |   42   |     None    |     None    | 3.31968E-03 | 1.22083E+04
+ 5 |  252   |     None    |     None    | 1.17503E-06 | 0.00000E+00
+ 10|  462   |     None    |     None    | 5.64474E-07 | 0.00000E+00
+ 15|  672   |     None    |     None    | 1.15398E-06 | 1.03295E+02
+ 20|  882   |     None    |     None    | 1.19067E-06 | 1.01644E+02
+ 25|  1092  |     None    |     None    | 3.15881E-06 | 3.18078E+02
+ 30|  1302  |     None    |     None    | 2.46525E-06 | 1.02150E+02
+ 35|  1512  |     None    |     None    | 3.78854E-06 | 2.43770E+02
+ 40|  1722  |     None    |     None    | 5.28652E-06 | 5.41372E+02
+ 45|  1932  |     None    |     None    | 3.73491E-06 | 6.70494E+02
+ 50|  2142  |     None    |     None    | 3.71475E-06 | 8.11561E+02
+ 55|  2352  |     None    |     None    | 5.35897E-06 | 6.73764E+02
+ 60|  2562  |     None    |     None    | 3.70203E-06 | 3.04062E+02
+ 65|  2772  |     None    |     None    | 3.95249E-06 | 2.56410E+02
+ 70|  2982  |     None    |     None    | 3.96360E-06 | 2.41908E+02
+ 75|  3192  |     None    |     None    | 4.56110E-06 | 2.95308E+02
+ 80|  3402  |     None    |     None    | 4.64510E-06 | 3.02493E+02
+ 85|  3612  |     None    |     None    | 5.45160E-06 | 3.32505E+02
+ 90|  3822  |     None    |     None    | 4.81172E-06 | 4.10984E+02
+ 95|  4032  |     None    |     None    | 4.94374E-06 | 3.81866E+02
+ 99|  4200  |     None    |     None    | 1.75532E-05 | 1.67718E+02
+用时：11.10870361328125 秒
+非支配个体数：420 个
+
+Process finished with exit code 0
